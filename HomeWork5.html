@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<!-- 1. Создать функцию, генерирующую шахматную доску. 
+    При этом можно использовать любые html-теги по своему желанию. 
+    Доска должна быть разлинована соответствующим образом, т.е. 
+    чередовать черные и белые ячейки. Строки должны нумероваться числами от 1 до 8, 
+    столбцы – латинскими буквами A, B, C, D, E, F, G, H. -->
+<script>
+    let box = document.querySelector('#box');
+    ///////////////////////////////////////Забрали #box////////////////////////////////////////////////////////
+    let colum = document.createElement('colum')
+    colum.style.display = "block"
+    colum.style.backgroundColor ="red"
+    let columX2 = document.createElement('colum')
+    columX2.style.display = "block"
+    columX2.style.backgroundColor ="gold"
+        ///////////////////////////////////////Cоздали 8 колонок////////////////////////////////////////////////////////
+
+    let black = document.createElement('div');
+    black.style.width ='50px'
+    black.style.height ='50px'
+    black.style.color ="#fff"
+    black.style.backgroundColor ='black'
+    black.style.display ="inline-block"
+    let blackX1 = document.createElement('div');
+    blackX1.style.width ='50px'
+    blackX1.style.height ='50px'
+    blackX1.style.color ="#fff"
+    blackX1.style.backgroundColor ='black'
+    blackX1.style.display ="inline-block"
+    let blackX2 = document.createElement('div');
+    blackX2.style.width ='50px'
+    blackX2.style.height ='50px'
+    blackX2.style.color ="#fff"
+    blackX2.style.backgroundColor ='black'
+    blackX2.style.display ="inline-block"
+    let blackX3 = document.createElement('div');
+    blackX3.style.width ='50px'
+    blackX3.style.height ='50px'
+    blackX3.style.color ="#fff"
+    blackX3.style.backgroundColor ='black'
+    blackX3.style.display ="inline-block"
+    //////////////////////////////////////////////Создали 4 елементов Black////////////////////////////////////////////////////////////
+    let white = document.createElement('div');
+    white.style.width ='50px'
+    white.style.height ='50px'
+    white.style.color ="#fff"
+    white.style.backgroundColor ='grey'
+    white.style.display ="inline-block"
+    let whiteX1 = document.createElement('div');
+    whiteX1.style.width ='50px'
+    whiteX1.style.height ='50px'
+    whiteX1.style.color ="#fff"
+    whiteX1.style.backgroundColor ='grey'
+    whiteX1.style.display ="inline-block"
+    let whiteX2 = document.createElement('div');
+    whiteX2.style.width ='50px'
+    whiteX2.style.height ='50px'
+    whiteX2.style.color ="#fff"
+    whiteX2.style.backgroundColor ='grey'
+    whiteX2.style.display ="inline-block"
+    let whiteX3 = document.createElement('div');
+    whiteX3.style.width ='50px'
+    whiteX3.style.height ='50px'
+    whiteX3.style.color ="#fff"
+    whiteX3.style.backgroundColor ='grey'
+    whiteX3.style.display ="inline-block"
+    //////////////////////////////////////////////Создали 4 елементов White////////////////////////////////////////////////////////////
+    line()
+    lineX2()
+    function line(){
+        
+        for (let i = 1; i <= 1; i++){
+            columInv = box.append(colum); 
+            blackInv = colum.append(black);
+            whiteInv = colum.append(white);
+            blackInv = colum.append(blackX1);
+            whiteInv = colum.append(whiteX1);
+            blackInv = colum.append(blackX2);
+            whiteInv = colum.append(whiteX2);
+            blackInv = colum.append(blackX3);
+            whiteInv = colum.append(whiteX3);
+            ++i;
+        }
+        
+        
+    }
+    function lineX2(){
+        
+        for (let i = 1; i <= 1; i++){
+            columInvX2 = box.append(columX2); 
+            blackInvX2 = columX2.append(black);
+            whiteInvX2 = columX2.append(white);
+            blackInvX2 = columX2.append(blackX1);
+            whiteInvX2 = columX2.append(whiteX1);
+            blackInvX2 = columX2.append(blackX2);
+            whiteInvX2 = columX2.append(whiteX2);
+            blackInvX2 = columX2.append(blackX3);
+            whiteInvX2 = columX2.append(whiteX3);
+            ++i;
+        }
+        
+        
+    }
+    // Ни чего не получается Ни чего не понимаю(Если пытаться создать new Colum/пишет Colum не конструктор)
+</script>
+</html>
