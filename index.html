@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Написать функцию, преобразующую число в объект. 
+        Передавая на вход число от 0 до 999, 
+        мы должны получить на выходе объект, 
+        в котором в соответствующих свойствах описаны единицы, 
+        десятки и сотни. Например, для числа 245 
+        мы должны получить следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. 
+        Если число превышает 999, 
+        необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект. -->
+    <script>
+        let homeWork = parseInt(prompt(("Введите число до 999")))
+        function qest(){
+            let i = homeWork
+            if( i < 1000){
+            let ferst = homeWork.toString()[0];
+            let second = homeWork.toString()[1];
+            let therd = homeWork.toString()[2];
+            let work ={};
+            work.ferst = ferst;
+            work.second = second;
+            work.therd = therd;
+            console.log(work)
+            console.log(ferst + " сотен");
+            console.log(second + " десятков");
+            console.log(therd + " едениц");
+            }else{
+                console.log("Ваше число больше 999")
+            }
+        }
+         qest();
+        
+    </script>
+    <b></b>
+    <!-- Продолжить работу с интернет-магазином:
+    В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+    Реализуйте такие объекты.
+    Перенести функционал подсчета корзины на объектно-ориентированную базу.
+    -->
+    <script>       
+        const corz={
+            money
+        }
+        const product1={
+            money : parseInt(prompt('Введите стоймость первого товара'))
+        }
+        const product2={
+            money : parseInt(prompt('Введите стоймость второго товара'))
+        }
+        const product3={
+            money : parseInt(prompt('Введите стоймость третьего товара'))
+        }
+        function money(){
+            corz.money = (product1.money + product2.money) + (product3.money)
+            console.log('Второе задание xxxxxxxxxxxxxxxxxxxxxxxxxx')
+            console.log("Цена первого товара  " + product1.money)
+            console.log("Цена второго товара  " + product2.money)
+            console.log("Цена третьего товара  " + product3.money)
+                 console.log(corz.money)
+                 alert("Сумма корзины =  " + corz.money)
+        }
+        money()
+    </script>
+</body>
+</html>
