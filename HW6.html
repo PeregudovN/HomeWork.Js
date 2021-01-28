@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div><h1>Cумма вышей корзины :</h1>
+        <h1 id="elem"></h1>
+    </div>
+    <div>
+        <button class="butt1" value="true" onclick="butt(event)">Купить за 100</button>
+        <button class="butt2" value="true" onclick="buttt(event)">Купить за 200</button>
+    </div>
+    
+<script>
+    i = 0;
+    let butt1 = document.getElementsByClassName('butt1')
+    let butt2 = document.getElementsByClassName('butt2')
+
+     function butt(event) {
+        if(i < 1){
+        document.getElementById("elem").textContent =moneyPhone
+        ++i
+        console.log(i)
+    }else if(i < 2){
+        document.getElementById("elem").textContent =sumPhone
+        ++i
+    }else if(i < 3){
+        document.getElementById("elem").textContent =(sumPhone + moneyPhone)
+        ++i
+        console.log(i)
+    }else{
+        document.getElementById("elem").textContent = moneyPhone+(moneyPhone*i)
+        ++i
+        console.log(i)
+    }
+  }
+  function buttt(event) {
+        if(i < 1){
+        document.getElementById("elem").textContent =mmoneyPhoneD*(i+1)
+        ++i
+        console.log(i)
+    }else if(i < 2){
+        document.getElementById("elem").textContent =sumPhoneD
+        ++i
+    }else if(i < 3){
+        document.getElementById("elem").textContent =(sumPhoneD + moneyPhoneD*(i+1))
+        ++i
+        console.log(i)
+    }else{
+        document.getElementById("elem").textContent = moneyPhoneD+(moneyPhoneD*(i+1))
+        ++i
+        console.log(i)
+    }
+  }
+    let moneyPhone = 100
+    let sumPhone = moneyPhone + moneyPhone;
+    let moneyPhoneD = 100
+    let sumPhoneD = moneyPhone + moneyPhone;
+
+    
+</script>
+</body>
+
+</html>
